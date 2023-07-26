@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03_third</title>
+</head>
+<body>
+<h1>03_third</h1>
+<%!
+	//declaration 클래스 정의부
+	//멤버변수
+	String name = "나는무너";
+	int age = 49;
+	boolean marriage = true;
+	
+	void math_1(){
+		System.out.println("math_1() 실행");
+	}
+	//System.out.println("정의부에서 실행구문 불가");
+%>
+<%!
+	//int age = 23;
+	int [] arr = {11,22,33,44,55};
+%>
+<% 	//scriptlet : _jspService() 
+	System.out.println("math_1() 실행");
+%>
+</body>
+</html>
+
+
