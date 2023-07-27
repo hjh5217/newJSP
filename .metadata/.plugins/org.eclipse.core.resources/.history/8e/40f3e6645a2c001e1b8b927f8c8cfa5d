@@ -1,0 +1,8 @@
+package subject;
+
+public class person {
+	String name;
+	String kor;
+	String eng;
+	String math;
+}

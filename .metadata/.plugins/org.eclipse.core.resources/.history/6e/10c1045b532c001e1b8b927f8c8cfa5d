@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>국영수 점수 계산하기</title>
+</head>
+<body>
+	<form action="">
+		<table>
+			<tr>
+				<th>이름</th><th>국어</th><th>영어</th><th>수학</th>
+			</tr>
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

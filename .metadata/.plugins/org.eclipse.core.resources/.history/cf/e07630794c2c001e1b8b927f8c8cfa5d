@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>numForm</title>
+</head>
+<body>
+	<h1>numForm</h1>
+	<form action="numReg.jsp">
+		<table border="">
+			<% for(int i = 0; i<10; i++){%>
+			<tr>
+				<td><%=i %>번째</td>
+				<td><input type="text" name="no" value="<%=(int)(Math.random()*100)+10 %>"/></td>
+			</tr>
+			<%} %>
+			<td><input type="text" name="no" value="하이"/></td>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="계산"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

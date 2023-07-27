@@ -20,5 +20,8 @@
 	<a href="err/ccc.jsp">500</a>
 	<a href="err/ddd.jsp">404</a>
 	<a href="err/eee.jsp">type</a>
+	<h2>request</h2>
+	<a href="request/numForm.jsp">numForm</a>
+	<a href="subject/sumAvg.jsp">sumAvg</a>
 </body>
 </html>
