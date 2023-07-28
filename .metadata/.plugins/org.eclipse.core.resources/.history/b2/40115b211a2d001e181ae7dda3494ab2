@@ -1,0 +1,14 @@
+package oops_p;
+
+public class arraycheck {
+
+	
+	public static void main(String[] args) {
+		long [] arr = new long[2];
+		arr[1] = 92233722233;
+		for(long ar : arr) {
+			System.out.println(ar);
+		}
+	}
+
+}

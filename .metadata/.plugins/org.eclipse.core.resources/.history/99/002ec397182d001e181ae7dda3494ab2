@@ -1,0 +1,11 @@
+package oops_p;
+
+public class arraycheck {
+
+	int [] arr = new arr[2];
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

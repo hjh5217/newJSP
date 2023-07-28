@@ -1,0 +1,12 @@
+package oops_p;
+
+public class arraycheck {
+
+	
+	public static void main(String[] args) {
+		int [] arr = new int[2];
+		arr[0]= 2147483647;
+
+	}
+
+}

@@ -17,21 +17,21 @@
 <%
 // 전 페이지에 입력된 값으로 person 을 만들어서 personList에 넣어줌
 List<Person> personList = new ArrayList<>();
+
+String[] name = request.getParameterValues("name");
+String[] kor  = request.getParameterValues("kor");
+String[] eng = request.getParameterValues("eng");
+String[] math = request.getParameterValues("math");
+
 for(int i=0; i<5; i++){ 
-	String[] name = request.getParameterValues("name");
-	String[] kor  = request.getParameterValues("kor");
-	String[] eng = request.getParameterValues("eng");
-	String[] math = request.getParameterValues("math");
 	String nameOne = name[i];
 	int korInt = Integer.parseInt(kor[i]);
 	int engInt = Integer.parseInt(eng[i]);
 	int mathInt = Integer.parseInt(math[i]);
 	int sum = korInt+engInt+mathInt;
 	int avg = sum/3;	
-	int rank = 1;
-	int count = 1;
 	
-	personList.add(new Person(nameOne, korInt, engInt, engInt, sum, avg));
+	personList.add(new Person(nameOne, korInt, engInt, mathInt, sum, avg));
 }
 %>
 <%
