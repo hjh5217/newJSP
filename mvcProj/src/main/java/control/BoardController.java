@@ -26,29 +26,20 @@ public class BoardController extends HttpServlet {
 		 * System.out.println(request.getRequestURI());
 		 * System.out.println(request.getContextPath()+"/board/");
 		 */
-		
-		  
 		  
 		String serviceStr = request.getRequestURI().substring(
 				(request.getContextPath()+"/board/").length()
 				);
 		System.out.println(serviceStr);
-		try {
-			System.out.println("1"+request.getRequestURI());
-			  System.out.println("2"+request.getContextPath()+"/board/");
-			  System.out.println("3 "+request.getRequestURL());
-			  System.out.println("4 "+(request.getContextPath()+"/board/").length());
-			  System.out.println("5 "+Class.forName("ser_p."+serviceStr));
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
 		
 		try {
+			request.setCharacterEncoding("utf-8");
+			request.setAttribute("mainPage", serviceStr);
 			//Object service = Class.forName("ser_p."+serviceStr).newInstance();
 			BoardService service = (BoardService)Class.forName("ser_p."+serviceStr).newInstance();
 			service.execute(request, response);
 			
-			request.setAttribute("mainPage", serviceStr);
+			
 			
 			RequestDispatcher dispatcher = 
 					request.getRequestDispatcher("/views/template.jsp");

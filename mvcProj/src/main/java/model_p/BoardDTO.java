@@ -2,6 +2,7 @@ package model_p;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Pattern;
 
 public class BoardDTO {
 
@@ -37,8 +38,23 @@ public class BoardDTO {
 		this.pw = pw;
 	}
 	public String getUpfile() {
+		
+		if(upfile==null 
+				|| upfile.trim().equals("") 
+				|| upfile.trim().equals("null")) {
+			upfile = "";
+		}
+		
 		return upfile;
 	}
+	
+	public boolean isImg() {
+		// [.] . 한글자
+		boolean res = Pattern.matches(".*[.](jpg|bmp|png|gif)", getUpfile().toLowerCase());
+		
+		return res;
+	}
+	
 	public void setUpfile(String upfile) {
 		this.upfile = upfile;
 	}
