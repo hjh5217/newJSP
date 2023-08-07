@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	String mainUrl = "board/"+request.getAttribute("mainPage")+".jsp";
+	String mainUrl = request.getAttribute("mainPage")+".jsp";
 %>
 <!DOCTYPE html>
 <html>

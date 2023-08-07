@@ -1,10 +1,8 @@
 <%@page import="model_p.PageData"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-	PageData pd = (PageData)request.getAttribute("pd");
-%>
-<form action="BWriteReg" method="post" enctype="multipart/form-data">
+
+<form action="GWriteReg" method="post" enctype="multipart/form-data">
 	<table border="">
 		<tr>
 			<td width="100px">제목</td>
@@ -28,9 +26,9 @@
 		</tr>
 		<tr>
 			<td colspan="2" align="center">
-			<input type="submit" value="글쓰기">
+			<input type="submit" value="업로드">
 			<input type="reset" value="초기화">
-			<a href="BList?page=<%=pd.page%>">목록으로</a>
+			<a href="GList">목록으로</a>
 			</td>
 		</tr>
 	</table>
